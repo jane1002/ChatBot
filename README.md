@@ -18,9 +18,14 @@ Conversation simulation
     | any 2-digit numeric entry                         | Record + Recird.id: id: XX                                                                      |
     | others                                            | Help Guide                                                                                      |
 
+    * Help Guide: Please enter phone number (10-Digits), id (2-Digits) and name (2 Words) for each record. Type 'New' for new recordentry.
+     Type 'Done' when complete.
+
+
 # Usage
     Basically, this simple application is used to simulate a user is talking to a robot. Based what the user say,
     it will automatically answer you question.
+
 
 # Environment
     1. maven
