@@ -20,7 +20,7 @@ public class ChatBotMain {
 		System.out.println(OutputWords.INITIAL_GREETING + " " + recordsContainer.getCurrentRecordIndexNumber() + ".");
 
 		while(true) {
-			String input = inputFormatter.format(scanner.nextLine());
+			String input = inputFormatter.trimSpace(scanner.nextLine());
 			Response response = responseStrategy.analyze(input);
 
 			String res = response.returnResponse(recordsContainer, input);

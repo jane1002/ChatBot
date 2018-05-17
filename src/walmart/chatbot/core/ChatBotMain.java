@@ -4,7 +4,6 @@ package walmart.chatbot.core;
 import java.util.Scanner;
 
 import walmart.chatbot.container.RecordsContainer;
-import walmart.chatbot.utilities.InputFormatter;
 import walmart.chatbot.utilities.InputProperties;
 import walmart.chatbot.utilities.OutputWords;
 
