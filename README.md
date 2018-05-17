@@ -53,7 +53,7 @@ Conversation simulation
 # Environment
     1. Maven
     2. Java 8
-    3. IDE: IntelliJ 2016
+    3. IDE: IntelliJ
     4. Start project by running ChatBot\src\main\java\walmart\chatbot\core\ChatbotMain.java
 
 # Third part dependency
