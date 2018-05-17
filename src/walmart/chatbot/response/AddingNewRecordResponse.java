@@ -1,6 +1,7 @@
-package walmart.chatbot.core;
+package walmart.chatbot.response;
 
 import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.InputWords;
 import walmart.chatbot.utilities.OutputWords;
 
@@ -20,6 +21,4 @@ public class AddingNewRecordResponse implements Response {
         recordsContainer.addRecord();
         return OutputWords.ENTER_HINT + " " +recordsContainer.getLastRecordIndexNumber() + ".";
     }
-
-
 }

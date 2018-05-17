@@ -1,6 +1,7 @@
-package walmart.chatbot.core;
+package walmart.chatbot.response;
 
 import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.PhoneNumberValidator;
 
 /**
@@ -13,7 +14,6 @@ public class PhoneNumberResponse implements Response {
     public PhoneNumberResponse() {
         this.validator = new PhoneNumberValidator();
     }
-
 
     @Override
     public boolean accept(String input) {

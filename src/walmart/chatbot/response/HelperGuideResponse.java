@@ -1,9 +1,11 @@
-package walmart.chatbot.core;
+package walmart.chatbot.response;
 
 import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.InputProperties;
 
 public class HelperGuideResponse implements Response {
+
 	private InputProperties inputProperties;
 
 	public HelperGuideResponse() {
@@ -17,11 +19,8 @@ public class HelperGuideResponse implements Response {
 
 	@Override
 	public String returnResponse(RecordsContainer recordsContainer, String input) {
-
 		return "Please enter phone number (" + inputProperties.PHONE_NUMBER_LENGTH + "-Digits), id (" + inputProperties.ID_LENGTH
 				+ "-Digits) " + "and name " + "(" + inputProperties.NAME_WORDS_LENGTH + " Words) for each record. Type 'New' for new record" +
 				"entry. Type 'Done' when complete.";
 	}
-
-
 }

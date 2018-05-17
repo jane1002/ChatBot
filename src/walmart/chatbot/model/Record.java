@@ -2,14 +2,12 @@ package walmart.chatbot.model;
 
 
 public class Record{
-	
 	private int oid;
 	private String id;
 	private String name;
 	private String phoneNumber;
 
 	public Record() {
-
 	}
 
 	public Record(int oid, String id, String name, String phoneNumber) {
@@ -50,5 +48,4 @@ public class Record{
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
 }

@@ -1,6 +1,7 @@
-package walmart.chatbot.core;
+package walmart.chatbot.response;
 
 import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.InputWords;
 import walmart.chatbot.utilities.OutputWords;
 import walmart.chatbot.utilities.RandomGenerator;
@@ -20,6 +21,6 @@ public class GreetingResponse implements Response {
 
 	@Override
 	public String returnResponse(RecordsContainer recordsContainer, String input) {
-		return randomGenerator.getAnswerWord(input, OutputWords.greetingAnswerWords);
+		return randomGenerator.getAnswerWord(OutputWords.greetingAnswerWords);
 	}
 }

@@ -1,11 +1,10 @@
-package walmart.chatbot.core;
+package walmart.chatbot.response;
 
 import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.NameValidator;
 
-/**
- * Created by YFAN on 5/16/2018.
- */
+
 public class NameResponse implements Response {
 
     NameValidator nameValidator;
@@ -24,5 +23,4 @@ public class NameResponse implements Response {
         return "Record " + recordsContainer.getLastRecordIndexNumber() + ": " + "name: "
                 + recordsContainer.setAndGetName(input);
     }
-
 }

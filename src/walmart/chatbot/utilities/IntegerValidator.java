@@ -3,9 +3,7 @@ package walmart.chatbot.utilities;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by YFAN on 5/16/2018.
- */
+
 public class IntegerValidator implements Validator {
 
     @Override

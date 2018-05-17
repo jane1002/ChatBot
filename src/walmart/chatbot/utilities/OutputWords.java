@@ -19,7 +19,4 @@ public class OutputWords {
             GREETING_ANSWER_HOWAREU,
             GREETING_ANSWER_HEY
     );
-
-    // help answer
-    public static final String HELP_GUIDE = "Please enter name, ID, phone number";
 }

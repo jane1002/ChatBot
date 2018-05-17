@@ -1,12 +1,12 @@
-package walmart.chatbot.core;
+package walmart.chatbot.response;
 
 import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.InputWords;
 
-/**
- * Created by YFAN on 5/16/2018.
- */
-public class TerminationResponse implements Response{
+
+public class TerminationResponse implements Response {
+
     @Override
     public boolean accept(String input) {
         return InputWords.terminateWords.contains(input);
@@ -18,6 +18,4 @@ public class TerminationResponse implements Response{
         System.exit(0);
         return "";
     }
-
-
 }

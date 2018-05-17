@@ -55,7 +55,6 @@ public class RecordsContainer {
 	}
 
 	public String printAllRecords() {
-
 		String res = "";
 
 		if(isEmpty()) {
@@ -97,5 +96,4 @@ public class RecordsContainer {
 		this.getLastRecord().setId(id);
 		return id;
 	}
-
 }

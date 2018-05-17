@@ -57,6 +57,4 @@ public class InputWords {
             CREATE_NEXT,
             CREATE_MORE
     );
-
-
 }
