@@ -6,21 +6,17 @@ Conversation simulation
 
 # Supporting input & corresponding output
 
-    | User Possible Inputs (case insensitive)	     | Your Program Action
-    |------------------------------------------------|-------------------------------------------------------|
-    | (no input)First start                          | “Welcome to conversation simulation!”                 |
-    |                                                | Please enter phone number, id, name for new record 1. |
-    |------------------------------------------------|-------------------------------------------------------|
-    |Hi; Hey; Hello	                                 | (Randomly) pick from “Hello”, “How are you”, “Hey”.   |
-    |Help; Question: H; Q	If any of the inputs entered, your program should show the actual quick guide to user
-    |New; Next; More	If any of the inputs entered, your program creates a new record and ready for the field entries.
-    |Done; Complete	If any of the inputs entered, your program should show all records on screen and exit.
-    (any 10-digit numeric entry)	Indicate current record phone number is…
-    (any string with two words other than ‘Start over’)	Indicate current record name is…
-    (any 2-digit numeric entry)	Indicate current record id is…
-    (anything else)	Treat it as invalid entry and show your help guide
-    Start over; Cancel	Whenever user enters this input, your program should start over, and shows “Welcome to conversation simulation!” and is ready to accept the first record field entries again.
-
+    | User Possible Inputs (case insensitive)           | Your Program Action                                                                             |
+    |---------------------------------------------------|-------------------------------------------------------------------------------------------------|
+    | (no input)First start                             | “Welcome to conversation simulation!”     Please enter phone number, id, name for new record 1. |
+    | Help; Question: H; Q                              | Help Guide*                                                                                     |
+    | New; Next; More                                   | Please enter phone number, id, name for new record + Record.id                                  |
+    | Done; Complete                                    | ;List all records, including empty record which have no fields. *                               |
+    | Start over; Cancel                                | “Welcome to conversation simulation!”     Please enter phone number, id, name for new record 1. |
+    | any 10-digit numeric entry                        | Record + Record.id: phone number: XXXXXXXXXX                                                    |
+    | any string with two words other than ‘Start over’ | Record + Record.id: name: SSSS SSSSS                                                            |
+    | any 2-digit numeric entry                         | Record + Recird.id: id: XX                                                                      |
+    | others                                            | Help Guide                                                                                      |
 
 # Usage
     Basically, this simple application is used to simulate a user is talking to a robot. Based what the user say,
