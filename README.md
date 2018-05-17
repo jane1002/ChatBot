@@ -27,7 +27,11 @@ Conversation simulation
     | col 2 is |    centered   |   $12 |
     | col 3 is | right-aligned |    $1 |
 
-
+    dog | bird | cat
+    ----|------|----
+    foo | foo  | foo
+    bar | bar  | bar
+    baz | baz  | baz
 # Usage
     Basically, this simple application is used to simulate a user is talking to a robot. Based what the user say,
     it will automatically answer you question.
