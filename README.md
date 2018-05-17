@@ -4,7 +4,7 @@ Conversation simulation
 
 # Working flow
 
-![chatbot](https://user-images.githubusercontent.com/5478712/40206151-7282cecc-59f4-11e8-8b06-7b85134dc093.PNG)
+![chatbotworkflow](https://user-images.githubusercontent.com/5478712/40208143-bbb4e5f4-59fd-11e8-9a31-ab7ac7e76b2a.PNG)
 
 # Supporting input & corresponding output
 
