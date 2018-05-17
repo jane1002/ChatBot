@@ -54,7 +54,7 @@ Conversation simulation
     1. Maven
     2. Java 8
     3. IDE: IntelliJ 2016
-    3. Start project by running ChatBot\src\main\java\walmart\chatbot\core\ChatbotMain.java
+    4. Start project by running ChatBot\src\main\java\walmart\chatbot\core\ChatbotMain.java
 
 # Third part dependency
     1. org.reflections version-0.9.10. Reference: https://github.com/ronmamo/reflections
