@@ -4,9 +4,7 @@ import walmart.chatbot.container.RecordsContainer;
 import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.PhoneNumberValidator;
 
-/**
- * Created by YFAN on 5/16/2018.
- */
+
 public class PhoneNumberResponse implements Response {
 
     private PhoneNumberValidator validator;
