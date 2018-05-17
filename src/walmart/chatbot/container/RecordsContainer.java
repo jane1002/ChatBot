@@ -5,14 +5,11 @@ import walmart.chatbot.model.Record;
 
 
 public class RecordsContainer {
-	
-	public ArrayList<Record> records;
+
+	private ArrayList<Record> records;
 	
 	public RecordsContainer() {
-	}
-
-	public RecordsContainer(ArrayList<Record> records) {
-		this.records = records;
+		this.records = new ArrayList<>();
 	}
 	
 	public ArrayList<Record> getRecords() {
@@ -23,11 +20,82 @@ public class RecordsContainer {
 		this.records = records;
 	}
 	
-	public void addRecord(Record newRecord) {
-		records.add(newRecord);
+	public void addRecord() {
+		records.add(new Record());
 	}
 	
 	public void clearAllRecords() {
 		records.clear();
 	}
+
+	public int getLastIndex() {
+		if(!isEmpty()) {
+			return this.records.size() - 1;
+		}
+
+		return 0;
+	}
+
+	public int getLastRecordIndexNumber() {
+		return (getLastIndex() + 1);
+	}
+
+	public int getNextRecordIndexNumber() {
+		return (getLastRecordIndexNumber() + 1);
+	}
+
+	public Record getLastRecord() {
+		if(!isEmpty()) {
+			return this.records.get(getLastIndex());
+		} else {
+			addRecord();
+		}
+
+		return this.records.get(getLastIndex());
+	}
+
+	public String printAllRecords() {
+
+		String res = "";
+
+		if(isEmpty()) {
+			return res;
+		}
+
+		System.out.println("=================================================");
+		for(int i = 0; i < records.size(); i++) {
+			String curRecord = "";
+			String name = records.get(i).getName() == null? "" : records.get(i).getName();
+			String id = records.get(i).getId() == null? "" : records.get(i).getId();
+			String phoneNumber = records.get(i).getPhoneNumber() == null? "" : records.get(i).getPhoneNumber();
+
+			curRecord = "Record " + (i + 1) + ": "+ String.format("%-12s", phoneNumber) + String.format("%-5s", id)
+					+ String.format("%-20s", name);
+			System.out.println(curRecord);
+
+		}
+		System.out.println("=================================================");
+
+		return res;
+	}
+
+	public boolean isEmpty() {
+		return records.isEmpty();
+	}
+
+	public String setAndGetPhoneNumber(String phoneNumber) {
+		this.getLastRecord().setPhoneNumber(phoneNumber);
+		return phoneNumber;
+	}
+
+	public String setAndGetName(String name) {
+		this.getLastRecord().setName(name);
+		return name;
+	}
+
+	public String setAndGetId(String id) {
+		this.getLastRecord().setId(id);
+		return id;
+	}
+
 }

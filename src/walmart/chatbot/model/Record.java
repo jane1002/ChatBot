@@ -1,19 +1,18 @@
 package walmart.chatbot.model;
 
-public class Record {
+
+public class Record{
 	
 	private int oid;
-	private long id;
+	private String id;
 	private String name;
-	private long phoneNumber;
-	
-	/**
-	 * @param oid
-	 * @param id
-	 * @param name
-	 * @param phoneNumber
-	 */
-	public Record(int oid, long id, String name, long phoneNumber) {
+	private String phoneNumber;
+
+	public Record() {
+
+	}
+
+	public Record(int oid, String id, String name, String phoneNumber) {
 		this.oid = oid;
 		this.id = id;
 		this.name = name;
@@ -28,11 +27,11 @@ public class Record {
 		this.oid = oid;
 	}
 	
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 	
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	
@@ -44,11 +43,12 @@ public class Record {
 		this.name = name;
 	}
 	
-	public long getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 	
-	public void setPhoneNumber(long phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
 }

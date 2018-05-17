@@ -1,31 +1,58 @@
 package walmart.chatbot.core;
 
-import walmart.chatbot.container.RecordsContainer;
+import java.util.List;
+
+import walmart.chatbot.utilities.ClassLoaderService;
+import walmart.chatbot.utilities.ResponseClassLoaderServiceImpl;
+
 
 public class ResponseStrategy {
-	
-	public int type;
+
+	private List<Response> responseList;
+	private ClassLoaderService classLoaderService;
+
+
+	public ResponseStrategy() {
+		this.classLoaderService = new ResponseClassLoaderServiceImpl();
+		this.responseList = classLoaderService.load("");
+	}
+
 	public Response analyze(String input) {
 		
-		RecordsContainer records = new RecordsContainer();
-		Response response = null;
-		
-		if(input.toLowerCase().equals("h") || input.toLowerCase().equals("help") 
-				|| input.toLowerCase().equals("q") || input.toLowerCase().equals("question")) {
-			response = new HelperGuideResponse();
-		} else if(input.toLowerCase().equals("hi") || input.toLowerCase().equals("hey") || input.toLowerCase().equals("hello")) {
-			response = new GreetingResponse();
-		} else if(input.toLowerCase().equals("start over") || input.toLowerCase().equals("cancel")) {
-			records.clearAllRecords();
-			System.out.println("Welcome");
-		} else if (input.toLowerCase().equals("done") || input.toLowerCase().equals("complete")) {
-			this.type = 0;
-		} else {
-			
-		}
-				
-		return response;
+		input = input.trim().length() == 0 ? " ": input.trim().toLowerCase();
+		return findMatchedResponse(responseList, input);
 
+		/*if(inputWords.helpWords.contains(input)) {
+			System.out.println(outputWords.HELP_GUIDE);
+		} else if(inputWords.greetingWords.contains(input)) {
+			randomReneratorService.getAnswerWord(input, outputWords.greetingAnswerWords);
+		} else if(inputWords.restartWords.contains(input)) {
+			recordsContainer.clearAllRecords();
+			System.out.println("Welcome Again...");
+		} else if (inputWords.terminateWords.contains(input)) {
+			recordsContainer.printAllRecords();
+			this.type = 0;
+		} else if (inputWords.createNewWords.contains(input)){
+			recordsContainer.addRecord();
+		} else if (phoneNumberMatcher.isValidPhoneNumber(input)) {
+			long number = Long.valueOf(input);
+			recordsContainer.getLastRecord().setPhoneNumber(number);
+			System.out.println("Record " + recordsContainer.getLastIndex()+ ": " +
+					"phone number: " + recordsContainer.getLastRecord().getPhoneNumber());
+		} else {
+			System.out.println(outputWords.HELP_GUIDE);
+		}*/
+
+	}
+
+	private Response findMatchedResponse(List<? extends  Response> matchers, String input) {
+		for(Response re: matchers) {
+			if(re.accept(input)) {
+				return re;
+			}
+		}
+
+		return new HelperGuideResponse();
 	}
 
 }

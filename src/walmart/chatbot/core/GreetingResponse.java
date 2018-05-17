@@ -1,15 +1,25 @@
 package walmart.chatbot.core;
 
-import java.util.Random;
+import walmart.chatbot.container.RecordsContainer;
+import walmart.chatbot.utilities.InputWords;
+import walmart.chatbot.utilities.OutputWords;
+import walmart.chatbot.utilities.RandomGenerator;
 
 public class GreetingResponse implements Response {
 
-	String[] list = {"Hello", "How are you", "Hey"};
+	private RandomGenerator randomGenerator;
 
-	@Override
-	public void showDescription() {
-		Random r = new Random();
-		System.out.println(list[r.nextInt(list.length)]);
+	public GreetingResponse() {
+		this.randomGenerator = new RandomGenerator();
 	}
 
+	@Override
+	public boolean accept(String input) {
+		return InputWords.greetingWords.contains(input);
+	}
+
+	@Override
+	public String returnResponse(RecordsContainer recordsContainer, String input) {
+		return randomGenerator.getAnswerWord(input, OutputWords.greetingAnswerWords);
+	}
 }

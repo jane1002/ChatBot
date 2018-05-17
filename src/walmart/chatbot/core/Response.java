@@ -1,6 +1,8 @@
 package walmart.chatbot.core;
 
+import walmart.chatbot.container.RecordsContainer;
+
 public interface Response {
-	public int type = 1; // continue
-	public void showDescription();
+	boolean accept(String input);
+	String returnResponse(RecordsContainer recordsContainer, String input);
 }
