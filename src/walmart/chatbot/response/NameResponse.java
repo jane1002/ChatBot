@@ -20,7 +20,7 @@ public class NameResponse implements Response {
 
     @Override
     public String returnResponse(RecordsContainer recordsContainer, String input) {
-        return "Record " + recordsContainer.getLastRecordIndexNumber() + ": " + "name: "
+        return "Record " + recordsContainer.getCurrentRecordIndexNumber() + ": " + "name: "
                 + recordsContainer.setAndGetName(input);
     }
 }

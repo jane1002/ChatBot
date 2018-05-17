@@ -15,7 +15,7 @@ public class TerminationResponse implements Response {
     @Override
     public String returnResponse(RecordsContainer recordsContainer, String input) {
         recordsContainer.printAllRecords();
-        System.exit(0);
-        return "";
+        recordsContainer.clearAllRecords();
+        return null;
     }
 }

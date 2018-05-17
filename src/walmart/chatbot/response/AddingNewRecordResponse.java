@@ -15,10 +15,7 @@ public class AddingNewRecordResponse implements Response {
 
     @Override
     public String returnResponse(RecordsContainer recordsContainer, String input) {
-        if(recordsContainer.getRecords().size() == 0) {
-            recordsContainer.addRecord();
-        }
         recordsContainer.addRecord();
-        return OutputWords.ENTER_HINT + " " +recordsContainer.getLastRecordIndexNumber() + ".";
+        return OutputWords.ENTER_HINT + " " +recordsContainer.getCurrentRecordIndexNumber() + ".";
     }
 }

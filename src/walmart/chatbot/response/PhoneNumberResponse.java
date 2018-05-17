@@ -22,7 +22,7 @@ public class PhoneNumberResponse implements Response {
 
     @Override
     public String returnResponse(RecordsContainer recordsContainer, String input) {
-        return "Record " + recordsContainer.getLastRecordIndexNumber() + ": " + "phone number: "
+        return "Record " + recordsContainer.getCurrentRecordIndexNumber() + ": " + "phone number: "
                 + recordsContainer.setAndGetPhoneNumber(input);
     }
 }

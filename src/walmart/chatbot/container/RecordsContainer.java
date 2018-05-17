@@ -10,6 +10,7 @@ public class RecordsContainer {
 	
 	public RecordsContainer() {
 		this.records = new ArrayList<>();
+		this.records.add(new Record());
 	}
 	
 	public ArrayList<Record> getRecords() {
@@ -36,15 +37,15 @@ public class RecordsContainer {
 		return 0;
 	}
 
-	public int getLastRecordIndexNumber() {
+	public int getCurrentRecordIndexNumber() {
 		return (getLastIndex() + 1);
 	}
 
 	public int getNextRecordIndexNumber() {
-		return (getLastRecordIndexNumber() + 1);
+		return getCurrentRecordIndexNumber() + 1;
 	}
 
-	public Record getLastRecord() {
+	public Record getCurrentRecord() {
 		if(!isEmpty()) {
 			return this.records.get(getLastIndex());
 		} else {
@@ -83,17 +84,17 @@ public class RecordsContainer {
 	}
 
 	public String setAndGetPhoneNumber(String phoneNumber) {
-		this.getLastRecord().setPhoneNumber(phoneNumber);
+		this.getCurrentRecord().setPhoneNumber(phoneNumber);
 		return phoneNumber;
 	}
 
 	public String setAndGetName(String name) {
-		this.getLastRecord().setName(name);
+		this.getCurrentRecord().setName(name);
 		return name;
 	}
 
 	public String setAndGetId(String id) {
-		this.getLastRecord().setId(id);
+		this.getCurrentRecord().setId(id);
 		return id;
 	}
 }

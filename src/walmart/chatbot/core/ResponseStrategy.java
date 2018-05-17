@@ -18,7 +18,7 @@ public class ResponseStrategy {
 	}
 
 	public Response analyze(String input) {
-		input = input.trim().length() == 0 ? " ": input.trim().toLowerCase();
+		input = input == null || input.trim().length() == 0 ? "h": input.trim().toLowerCase();
 		return findMatchedResponse(responseList, input);
 
 	}
