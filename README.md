@@ -4,6 +4,8 @@ Conversation simulation
 
 # Working flow
 
+![chatbot](https://user-images.githubusercontent.com/5478712/40205908-877b4b7a-59f3-11e8-9087-ec5993e33e97.PNG)
+
 # Supporting input & corresponding output
 
     | User Possible Inputs (case insensitive)           | Your Program Action                                                                             |
