@@ -20,6 +20,12 @@ Conversation simulation
     (any 2-digit numeric entry)	Indicate current record id is…
     (anything else)	Treat it as invalid entry and show your help guide
     Start over; Cancel	Whenever user enters this input, your program should start over, and shows “Welcome to conversation simulation!” and is ready to accept the first record field entries again.
+    
+    | Tables   |      Are      |  Cool |
+    |----------|:-------------:|------:|
+    | col 1 is |  left-aligned | $1600 |
+    | col 2 is |    centered   |   $12 |
+    | col 3 is | right-aligned |    $1 |
 
 
 # Usage
