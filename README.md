@@ -29,6 +29,24 @@ Conversation simulation
 
     Examples:
 
+    | INPUT      | OUTPUT                                                                                                                                              |
+    |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+    | 1234567890 | Record 1: phone number: 1234567890                                                                                                                  |
+    | 54         | Record 1: id: 54                                                                                                                                    |
+    | my name    | Record 1: name: My Name                                                                                                                             |
+    | next       | Please enter phone number, id, name for new record 2.                                                                                               |
+    | H          | Please enter phone number (10-Digits), id (2-Digits) and name (2 Words) for each record. Type 'New' for new recordentry. Type 'Done' when complete. |
+    | hi         | Hello *1                                                                                                                                             |
+    | done       | *2                                                                                                                                                    |
+    | start over | Welcome to conversation simulation!  Please enter phone number, id, name for new record 1.                                                          |
+    |---------------------------------------------------|-------------------------------------------------------------------------------------------------|
+
+    *1 The answer is randomly picked up. So it may be Hello, How are you, Hey.
+    *2
+        =================================================
+        Record 1: 1234567890  54   My Name
+        =================================================
+
 # Environment
     1. Maven
     2. java 8
@@ -37,4 +55,3 @@ Conversation simulation
 # Third part dependency
     1. org.reflections version-0.9.10. Reference: https://github.com/ronmamo/reflections
 
-Record 1: phone number: 1234567890
