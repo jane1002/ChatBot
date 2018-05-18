@@ -6,14 +6,14 @@ import java.util.List;
 public class InputWords {
 
     // greeting words
-	private static final String GREETING_HI = "hi";
+    private static final String GREETING_HI = "hi";
     private static final String GREETING_HEY = "hey";
     private static final String GREETING_HELLO = "hello";
 
     public static List<String> greetingWords = Arrays.asList(
-        GREETING_HI,
-        GREETING_HEY,
-        GREETING_HELLO
+            GREETING_HI,
+            GREETING_HEY,
+            GREETING_HELLO
     );
 
     // help words
@@ -40,7 +40,7 @@ public class InputWords {
 
     // terminate words
     private static final String TERMINATE_DONE = "done";
-    private static final String TERMINATE_COMPLETE= "complete";
+    private static final String TERMINATE_COMPLETE = "complete";
 
     public static List<String> terminateWords = Arrays.asList(
             TERMINATE_DONE,
@@ -49,7 +49,7 @@ public class InputWords {
 
     // new
     private static final String CREATE_NEW_ = "new";
-    private static final String CREATE_NEXT= "next";
+    private static final String CREATE_NEXT = "next";
     private static final String CREATE_MORE = "more";
 
     public static List<String> createNewWords = Arrays.asList(

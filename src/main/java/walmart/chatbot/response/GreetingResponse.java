@@ -8,19 +8,19 @@ import walmart.chatbot.utilities.RandomGenerator;
 
 public class GreetingResponse implements Response {
 
-	private RandomGenerator randomGenerator;
+    private RandomGenerator randomGenerator;
 
-	public GreetingResponse() {
-		this.randomGenerator = new RandomGenerator();
-	}
+    public GreetingResponse() {
+        this.randomGenerator = new RandomGenerator();
+    }
 
-	@Override
-	public boolean accept(String input) {
-		return InputWords.greetingWords.contains(input);
-	}
+    @Override
+    public boolean accept(String input) {
+        return InputWords.greetingWords.contains(input);
+    }
 
-	@Override
-	public String returnResponse(RecordsContainer recordsContainer, String input) {
-		return randomGenerator.getAnswerWord(OutputWords.greetingAnswerWords);
-	}
+    @Override
+    public String returnResponse(RecordsContainer recordsContainer, String input) {
+        return randomGenerator.getAnswerWord(OutputWords.greetingAnswerWords);
+    }
 }

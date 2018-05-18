@@ -20,6 +20,7 @@ public class IdResponse implements Response {
     @Override
     public String returnResponse(RecordsContainer recordsContainer, String input) {
         return "Record " + recordsContainer.getCurrentRecordIndexNumber() + ": " + "id: "
-                + recordsContainer.setAndGetId(input);    }
+                + recordsContainer.setAndGetId(input);
+    }
 
 }

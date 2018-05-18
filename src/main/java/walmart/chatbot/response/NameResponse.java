@@ -5,8 +5,6 @@ import walmart.chatbot.core.Response;
 import walmart.chatbot.utilities.InputFormatter;
 import walmart.chatbot.utilities.NameValidator;
 
-import com.sun.xml.internal.ws.util.StringUtils;
-
 
 public class NameResponse implements Response {
 

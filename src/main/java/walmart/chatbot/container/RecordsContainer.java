@@ -1,100 +1,101 @@
 package walmart.chatbot.container;
 
 import java.util.ArrayList;
+
 import walmart.chatbot.model.Record;
 
 
 public class RecordsContainer {
 
-	private ArrayList<Record> records;
-	
-	public RecordsContainer() {
-		this.records = new ArrayList<>();
-		this.records.add(new Record());
-	}
-	
-	public ArrayList<Record> getRecords() {
-		return records;
-	}
+    private ArrayList<Record> records;
 
-	public void setRecords(ArrayList<Record> records) {
-		this.records = records;
-	}
-	
-	public void addRecord() {
-		records.add(new Record());
-	}
-	
-	public void clearAllRecords() {
-		records.clear();
-	}
+    public RecordsContainer() {
+        this.records = new ArrayList<>();
+        this.records.add(new Record());
+    }
 
-	public int getLastIndex() {
-		if(!isEmpty()) {
-			return this.records.size() - 1;
-		}
+    public ArrayList<Record> getRecords() {
+        return records;
+    }
 
-		return 0;
-	}
+    public void setRecords(ArrayList<Record> records) {
+        this.records = records;
+    }
 
-	public int getCurrentRecordIndexNumber() {
-		return (getLastIndex() + 1);
-	}
+    public void addRecord() {
+        records.add(new Record());
+    }
 
-	public int getNextRecordIndexNumber() {
-		return getCurrentRecordIndexNumber() + 1;
-	}
+    public void clearAllRecords() {
+        records.clear();
+    }
 
-	public Record getCurrentRecord() {
-		if(!isEmpty()) {
-			return this.records.get(getLastIndex());
-		} else {
-			addRecord();
-		}
+    public int getLastIndex() {
+        if (!isEmpty()) {
+            return this.records.size() - 1;
+        }
 
-		return this.records.get(getLastIndex());
-	}
+        return 0;
+    }
 
-	public String printAllRecords() {
-		String res = "";
+    public int getCurrentRecordIndexNumber() {
+        return (getLastIndex() + 1);
+    }
 
-		if(isEmpty()) {
-			return res;
-		}
+    public int getNextRecordIndexNumber() {
+        return getCurrentRecordIndexNumber() + 1;
+    }
 
-		System.out.println("=================================================");
-		for(int i = 0; i < records.size(); i++) {
-			String curRecord = "";
-			String name = records.get(i).getName() == null? "" : records.get(i).getName();
-			String id = records.get(i).getId() == null? "" : records.get(i).getId();
-			String phoneNumber = records.get(i).getPhoneNumber() == null? "" : records.get(i).getPhoneNumber();
+    public Record getCurrentRecord() {
+        if (!isEmpty()) {
+            return this.records.get(getLastIndex());
+        } else {
+            addRecord();
+        }
 
-			curRecord = "Record " + (i + 1) + ": "+ String.format("%-12s", phoneNumber) + String.format("%-5s", id)
-					+ String.format("%-20s", name);
-			System.out.println(curRecord);
+        return this.records.get(getLastIndex());
+    }
 
-		}
-		System.out.println("=================================================");
+    public String printAllRecords() {
+        String res = "";
 
-		return res;
-	}
+        if (isEmpty()) {
+            return res;
+        }
 
-	public boolean isEmpty() {
-		return records.isEmpty();
-	}
+        System.out.println("=================================================");
+        for (int i = 0; i < records.size(); i++) {
+            String curRecord = "";
+            String name = records.get(i).getName() == null ? "" : records.get(i).getName();
+            String id = records.get(i).getId() == null ? "" : records.get(i).getId();
+            String phoneNumber = records.get(i).getPhoneNumber() == null ? "" : records.get(i).getPhoneNumber();
 
-	public String setAndGetPhoneNumber(String phoneNumber) {
-		this.getCurrentRecord().setPhoneNumber(phoneNumber);
-		return phoneNumber;
-	}
+            curRecord = "Record " + (i + 1) + ": " + String.format("%-12s", phoneNumber) + String.format("%-5s", id)
+                    + String.format("%-20s", name);
+            System.out.println(curRecord);
 
-	public String setAndGetName(String name) {
-		this.getCurrentRecord().setName(name);
-		return name;
-	}
+        }
+        System.out.println("=================================================");
 
-	public String setAndGetId(String id) {
-		this.getCurrentRecord().setId(id);
-		return id;
-	}
+        return res;
+    }
+
+    public boolean isEmpty() {
+        return records.isEmpty();
+    }
+
+    public String setAndGetPhoneNumber(String phoneNumber) {
+        this.getCurrentRecord().setPhoneNumber(phoneNumber);
+        return phoneNumber;
+    }
+
+    public String setAndGetName(String name) {
+        this.getCurrentRecord().setName(name);
+        return name;
+    }
+
+    public String setAndGetId(String id) {
+        this.getCurrentRecord().setId(id);
+        return id;
+    }
 }

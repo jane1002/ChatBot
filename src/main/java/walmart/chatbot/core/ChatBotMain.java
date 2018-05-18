@@ -9,28 +9,29 @@ import walmart.chatbot.utilities.InputProperties;
 import walmart.chatbot.utilities.OutputWords;
 
 public class ChatBotMain {
-	
-	public static void main(String args[]) {
-		Scanner scanner = new Scanner(System.in);
 
-		ResponseStrategy responseStrategy = new ResponseStrategy();
-		RecordsContainer recordsContainer = new RecordsContainer();
-		InputFormatter inputFormatter = new InputFormatter();
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.println(OutputWords.INITIAL_GREETING + " " + recordsContainer.getCurrentRecordIndexNumber() + ".");
+        ResponseStrategy responseStrategy = new ResponseStrategy();
+        RecordsContainer recordsContainer = new RecordsContainer();
+        InputFormatter inputFormatter = new InputFormatter();
 
-		while(true) {
-			String input = inputFormatter.trimSpace(scanner.nextLine());
-			Response response = responseStrategy.analyze(input);
+        System.out.println(
+                OutputWords.INITIAL_GREETING + " " + recordsContainer.getCurrentRecordIndexNumber() + ".");
 
-			String res = response.returnResponse(recordsContainer, input);
-			if(res == InputProperties.TERMINATION_CONDITION) {
-				System.exit(0);
-				break;
-			}
-			System.out.println(res);
-		}
+        while (true) {
+            String input = inputFormatter.trimSpace(scanner.nextLine());
+            Response response = responseStrategy.analyze(input);
 
-		scanner.close();
-	}
+            String res = response.returnResponse(recordsContainer, input);
+            if (res == InputProperties.TERMINATION_CONDITION) {
+                System.exit(0);
+                break;
+            }
+            System.out.println(res);
+        }
+
+        scanner.close();
+    }
 }

@@ -14,7 +14,7 @@ public class IntegerValidator implements Validator {
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(s);
 
-        if(m.find() && m.group().equals(s)) {
+        if (m.find() && m.group().equals(s)) {
             return true;
         }
         return false;
